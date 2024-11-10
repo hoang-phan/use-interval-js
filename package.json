@@ -1,0 +1,19 @@
+{
+  "name": "use-interval-js",
+  "version": "1.0.0",
+  "description": "Interval for react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoang-phan/use-interval-js.git"
+  },
+  "author": "hoang-phan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoang-phan/use-interval-js/issues"
+  },
+  "homepage": "https://github.com/hoang-phan/use-interval-js#readme"
+}
