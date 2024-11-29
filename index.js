@@ -1,5 +1,13 @@
 import { useEffect, useRef } from 'react';
 
+const setConsistentInterval = (fn, delay) => {
+  const startTime = Date.now();
+  fn();
+  const timeTaken = Date.now() - startTime;
+  const nextTime = Math.max(0, delay - timeTaken);
+  setTimeout(fn, nextTime);
+};
+
 export function useInterval(callback, delay) {
   const savedCallback = useRef();
   useEffect(() => {
@@ -11,7 +19,7 @@ export function useInterval(callback, delay) {
       savedCallback.current();
     }
     if (delay !== null) {
-      const id = setInterval(tick, delay);
+      const id = setConsistentInterval(tick, delay);
       return () => clearInterval(id);
     }
   }, [delay]);
